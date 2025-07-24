@@ -1,0 +1,72 @@
+package Joao;
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        /* BOOLEAN LOGIC */
+        //Boolean sao true (1) ou false (0)
+        boolean goodVideo = true;
+        boolean subscribed = false;
+        System.out.println("This is a good video: " + goodVideo);
+
+        boolean isCreative = false;
+        System.out.println("Player is in Creative Mode: " + subscribed);
+
+        // COMPARISONS (< <= >= > == !=)
+
+        int points = 41;
+        int pointsToPass =55;
+        boolean hasToPassTest = points >= pointsToPass; // Maior ou Igual
+        System.out.println("Has passed the test: " + hasToPassTest);
+
+        int health = 50;
+        boolean isAlive = health > 0;
+        System.out.println("Player still alive: " + isAlive);
+
+        boolean test = 100 == 100; // true
+        test = 100!= 100; // false
+
+        // Logic (AND OR NOT)
+
+        // OR
+        // a | b | c
+        // 0 | 0 | 0
+        // 1 | 0 | 1
+        // 0 | 1 | 1
+        // 1 | 1 | 1
+
+        // AND
+        // a | b | c
+        // 0 | 0 | 0
+        // 1 | 0 | 0
+        // 0 | 1 | 0
+        // 1 | 1 | 1
+
+        // NOT
+        // a | !a
+        // 0 | 1
+        // 1 | 0
+
+        boolean passedTest1 = true;
+        boolean passedTest2 = true;
+        boolean hasHonnors = passedTest1 && passedTest2; // VERDADEIRO se e somente se os dois forem VERDADEIRO
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Qual a sua idade");
+        int age = scanner.nextInt();
+        System.out.println("Coloque true ou false, você é da europa? ");
+        boolean isEuropean = scanner.nextBoolean();
+
+        int euDrinkAge = 18;
+        int usDrinkAge = 21;
+
+        boolean canDrink = isEuropean && age >= usDrinkAge || !isEuropean && age >= usDrinkAge;
+        System.out.println("Can you drink? " + canDrink);
+
+
+
+
+    }
+}
